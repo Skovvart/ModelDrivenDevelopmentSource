@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/BDDContracts/src" modelPluginID="BDDContracts"
+    modelName="BDDModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>BDDModel.ecore</foreignModel>
+  <genPackages prefix="BDDModel" disposableProviderFactory="true" ecorePackage="BDDModel.ecore#/">
+    <genClasses ecoreClass="BDDModel.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Model/Features"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Feature/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Feature/summary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Feature/Scenarios"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Feature/Background"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Feature/Behaviors"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BDDModel.ecore#//Scenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Scenario/GivenBlocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Scenario/ThenBlocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Scenario/WhenBlocks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Scenario/description"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//ScenarioSpecific"/>
+    <genClasses ecoreClass="BDDModel.ecore#//ScenarioOutline">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//ScenarioOutline/Examples"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BDDModel.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Content/value"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//Reference"/>
+    <genClasses ecoreClass="BDDModel.ecore#//Word"/>
+    <genClasses ecoreClass="BDDModel.ecore#//Example">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Example/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Example/keys"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//Background">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Background/GivenBlocks"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//Behavior">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Behavior/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Behavior/RequiringBlocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Behavior/EnsuringBlocks"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//Sentence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BDDModel.ecore#//Sentence/words"/>
+    </genClasses>
+    <genClasses ecoreClass="BDDModel.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BDDModel.ecore#//Value/elements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

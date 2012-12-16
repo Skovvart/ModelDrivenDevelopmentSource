@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<BDDModel:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:BDDModel="platform:/resource/BDDContracts/model/BDDModel"
+    xsi:schemaLocation="platform:/resource/BDDContracts/model/BDDModel BDDModel.ecore">
+  <Features
+      description="Addition"
+      summary="In order to avoid silly mistakes As a math idiot I want to be told the sum of two numbers">
+    <Behaviors
+        description="Add two numbers">
+      <RequiringBlocks
+          xsi:type="BDDModel:Reference"
+          value="input_1"/>
+      <RequiringBlocks
+          xsi:type="BDDModel:Word"
+          value="is"/>
+      <RequiringBlocks
+          xsi:type="BDDModel:Word"
+          value="a"/>
+      <RequiringBlocks
+          xsi:type="BDDModel:Word"
+          value="positive"/>
+      <RequiringBlocks
+          xsi:type="BDDModel:Word"
+          value="number"/>
+    </Behaviors>
+  </Features>
+</BDDModel:Model>

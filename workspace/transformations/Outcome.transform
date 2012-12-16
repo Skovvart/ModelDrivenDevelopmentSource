@@ -1,0 +1,10 @@
+transform package Outcome
+
+rule update_candidateIds the number of candidate identifiers is less than or equal to the number of candidates
+    expr 'numberOfCandidateIDs <= numberOfCandidates'
+end
+
+behavior Updatecandidateidentifiers
+    class 'ElectionConfiguration'
+    signature 'protected final void updateCandidateIDs(final int candidateID)'
+end

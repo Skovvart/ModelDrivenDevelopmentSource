@@ -1,0 +1,46 @@
+module dk.itu.transformit.M2M2T
+
+import org.eclipse.emf.mwe.utils.*
+import org.eclipse.xtext.parsetree.reconstr.*
+
+Workflow {
+	bean = StandaloneSetup {
+    	platformUri = "../"
+    	registerGeneratedEPackage = "BDDModel.BDDModelPackage"
+    	registerGeneratedEPackage = "TransformModel.TransformModelPackage"
+    	registerEcoreFile = "platform:/resource/BDDContracts/model/BDDModel.ecore"
+    	registerEcoreFile = "platform:/resource/BDDCTransform/model/TransformModel.ecore"
+	}
+	
+	component = org.eclipse.xtext.mwe.Reader {
+    	path = "../features/"
+    	register = dk.itu.bddcontracts.GherkinStandaloneSetup {}
+    	load = {
+    		slot = "bddmodel"
+			type = "Model" 
+        }
+	}
+	
+	component = org.eclipse.xtext.mwe.Reader {
+    	path = "../transformations/"
+    	register = dk.itu.bddctransform.LettuceStandaloneSetup {}
+    	load = {
+    		slot = "transformmodel"
+			type = "TransformModel_" 
+        }
+	}
+	
+	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {  
+		directory = "../TransformIT/out/"
+	}
+	
+	component = MakeJmlModel {
+		slot = "jmlmodel"
+	}
+	
+	component = JmlWriter {
+		slot = "jmlmodel"
+		path = "../TransformIT/out/"
+	}
+	
+}

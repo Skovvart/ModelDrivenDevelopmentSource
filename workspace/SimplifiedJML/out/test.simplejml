@@ -1,0 +1,10 @@
+class Calculator {
+	//@ requires input > 0 
+	
+	//@ ensures \result == input_1 + input_2 
+	//@ ensures input > 0 
+	/*< AUTO GENERATED >*/ public int add(int input1, int input2) {
+		/* TODO: Implementation */ throw new
+		UnsupportedOperationException("Not Implemented");
+	}
+}

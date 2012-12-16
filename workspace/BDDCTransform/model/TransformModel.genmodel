@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/BDDCTransform/src" modelPluginID="BDDCTransform"
+    modelName="TransformModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>TransformModel.ecore</foreignModel>
+  <genPackages prefix="TransformModel" disposableProviderFactory="true" ecorePackage="TransformModel.ecore#/">
+    <genClasses ecoreClass="TransformModel.ecore#//TransformModel_">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//TransformModel_/behaviors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//TransformModel_/rules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//TransformModel_/name"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Behavior">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Behavior/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Behavior/signature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Behavior/class"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Rule/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//Rule/patterns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//Rule/transformation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="TransformModel.ecore#//Pattern"/>
+    <genClasses ecoreClass="TransformModel.ecore#//ExactSting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//ExactSting/content"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Alternation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TransformModel.ecore#//Alternation/choices"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Optional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//Optional/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="TransformModel.ecore#//Transformation"/>
+    <genClasses ecoreClass="TransformModel.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Expression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//IfDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//IfDef/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//IfDef/true_body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//IfDef/false_body"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Match">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TransformModel.ecore#//Match/rule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransformModel.ecore#//Match/assignments"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//KeyValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//KeyValue/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//KeyValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="TransformModel.ecore#//Fail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransformModel.ecore#//Fail/message"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
